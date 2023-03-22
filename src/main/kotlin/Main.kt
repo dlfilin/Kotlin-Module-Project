@@ -1,5 +1,16 @@
+
+data class Note(val name: String, val content: MutableList<String>)
+
+data class Archive(val name: String, val notes: MutableList<Note>)
+
+val archives: MutableList<Archive> = mutableListOf()
+
 fun main() {
-    // ваш код начнется здесь
-    // вы не должны ограничиваться только классом Main и можете создавать свои классы по необходимости
-    println("Привет")
+
+    while (!ScreenManager.isExitPressed) {
+        ScreenManager.renderScreen()
+        ScreenManager.makeChoice()
+    }
+
 }
+
